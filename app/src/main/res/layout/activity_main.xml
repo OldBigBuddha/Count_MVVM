@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="count"
+            type="kyoto.oldbigbuddha.freeprojects.hoge.Count" />
+        <variable
+            name="viewModel"
+            type="kyoto.oldbigbuddha.freeprojects.hoge.MainViewModel" />
+    </data>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="24dp"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/btPlus"
+        android:text="+"
+        android:textSize="45dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{viewModel::onClickPlus}"/>
+
+    <TextView
+        android:id="@+id/tvCount"
+        android:textSize="60dp"
+        android:text="@{count.count}"
+        android:textColor="#000"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btMinus"
+        android:text="-"
+        android:textSize="45dp"
+        android:textColor="#000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{viewModel::onClickMinus}"/>
+
+</LinearLayout>
+
+</layout>
